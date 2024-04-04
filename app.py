@@ -7,13 +7,13 @@ import matplotlib.pyplot as plt
 # Load image
 image = cv2.imread('mona.jpg')
 
-# Test image
+# Test original image
 # plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 
-# Convert to grayscale
+# Convert image to grayscale
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-# Test image
+# Test grayscale image
 # plt.imshow(gray_image, cmap='gray')
 
 # Function for face detecting
@@ -33,7 +33,7 @@ def detect_face(I):
 # Detect faces in the image
 image_with_face_detected = detect_face(image.copy())
 
-# Test image
+# Test face detected image
 # cv2_imshow(image_with_face_detected) 
 
 # Apply Gaussian blur to the grayscale image
@@ -45,7 +45,7 @@ blurred_image = cv2.GaussianBlur(gray_image, (15, 15), 0)
 # Apply 3-channel to the grayscale image
 colorized_image = cv2.applyColorMap(gray_image, cv2.COLOR_GRAY2BGR)
 
-# Test image
+# Test 3-channel image
 # cv2_imshow(colorized_image)
 
 def create_face_mask(image):
