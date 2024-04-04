@@ -1,0 +1,6 @@
+1) Clone the repository (git clone X)
+2) Go to folder path (cd X)
+3) Create virtual enviroment (py -m venv .venv)
+4) Activate virtual enviroment (.venv\Scripts\activate)
+5) Install required packages (pip install -r requerements)
+6) Start the app (py app.py)
