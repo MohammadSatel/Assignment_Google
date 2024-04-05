@@ -36,7 +36,7 @@ image_with_face_detected = detect_face(image.copy())
 # Test face detected image
 # cv2_imshow(image_with_face_detected) 
 
-# Apply Gaussian blur to the grayscale image
+# Apply blur to the grayscale image
 blurred_image = cv2.GaussianBlur(gray_image, (15, 15), 0)
 
 # Test blurred image
@@ -92,19 +92,17 @@ plt.figure(figsize=(18, 6))
 # Original image
 plt.subplot(1, 3, 1)
 plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
-plt.title('Original')
+plt.title('Original Mona Lisa')
 
-# Mona Lisa with detected face
+# Mona Lisa with detected faces
 plt.subplot(1, 3, 2)
 plt.imshow(cv2.cvtColor(image_with_face_detected, cv2.COLOR_BGR2RGB))
-plt.title('Mona Lisa with detected face')
+plt.title('Mona Lisa With Detected Faces')
 
-# Resulting image
+# Gray outside the face
 plt.subplot(1, 3, 3)
 plt.imshow(cv2.cvtColor(result_image_with_face, cv2.COLOR_BGR2RGB))
-plt.title('Gray outside the face of Mona Lisa')
+plt.title('Gray Outside The Face Of Mona Lisa')
 
 # Show subplots
 plt.show()
-
-
